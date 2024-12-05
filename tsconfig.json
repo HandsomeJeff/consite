@@ -1,0 +1,22 @@
+{
+  "extends": "../base.tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    // "module": "nodenext",
+    // "moduleResolution": "nodenext",
+    "paths": {
+      "lib/*": ["../../lib/*"],
+      "@/*": ["./../../lib/*"]
+    }
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "include": ["next-env.d.ts", "src", "tina"],
+  "exclude": ["node_modules"]
+}
